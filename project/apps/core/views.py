@@ -1,13 +1,9 @@
 from rest_framework import viewsets
-from .models import University, Student
-from .serializers import UniversitySerializer, StudentSerializer
+from .models import Keyvalue
+from .serializers import KeyvalueSerializer
 
 
-class StudentViewSet(viewsets.ModelViewSet):
-    queryset = Student.objects.all()
-    serializer_class = StudentSerializer
+class KeyvalueViewSet(viewsets.ModelViewSet):
+    queryset = Keyvalue.objects.all()
+    serializer_class = KeyvalueSerializer
 
-
-class UniversityViewSet(viewsets.ModelViewSet):
-    queryset = University.objects.all()
-    serializer_class = UniversitySerializer
